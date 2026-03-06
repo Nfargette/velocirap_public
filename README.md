@@ -20,7 +20,7 @@ data.
 
 ```
 # Get repository from GitHub
-git clone git@github.com:vreville/velocirap.git
+git clone git@github.com:Nfargette/velocirap_public.git
 
 # Get into the new folder
 cd velocirap
