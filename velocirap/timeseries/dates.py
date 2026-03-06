@@ -4,10 +4,8 @@ Functions for time conversion
 ---------------------------------------------------------------------------- """
 
 import numpy  as np
-
-from datetime        import datetime, UTC, timedelta
-from pandas          import Timestamp, to_timedelta
-
+from datetime import datetime, UTC, timedelta
+from pandas   import Timestamp, to_timedelta
 
 def central_time_to_date(time, tc): 
     """ Routine that converts time in seconds since tc to datetime64 format.
