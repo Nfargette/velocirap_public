@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "IRAP velocity distribution function library"
 readme = "README.md"
 requires-python = ">=3.12"
-license = "BSD-3-Clause"
+license = "MIT"
 authors = []
 dependencies = [
     "numpy (>=2.2.4,<3.0.0)",
@@ -18,9 +18,6 @@ dependencies = [
     "dotmap",
     "cdflib (==1.3.3)",
     "cmcrameri",
-    "emcee",
-    "corner",
-    "scikit-learn",
     "imageio",
     "moviepy"
 ]
