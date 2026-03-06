@@ -165,7 +165,7 @@ create_animation(
 
 If you use the velocirap module in your research to visualise VDFs, please cite using :
 
-Fargette N., Réville V., Vergé T., Kieokaew R., Rasser C., Génot V., Lavraud B., Louarn P. and Fedorov A., _Velocirap, a python library for advanced analysis of ion velocity distribution functions_ (v1.0.0), DOI: 10.5281/zenodo.18888713 
+Fargette N., Réville V., Vergé T., Kieokaew R., Rasser C., Génot V., Lavraud B., Louarn P. and Fedorov A., _Velocirap, a python library for advanced analysis of ion velocity distribution functions_ (v1.0.0) https://doi.org/10.5281/zenodo.18888713
 
 
 
