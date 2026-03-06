@@ -87,6 +87,7 @@ create_animation(
     figure_names, animation_directory, animation_name,
     film_format = 'gif',
     fps = 10,
+    delete_figure_files = True
 )
 
 
