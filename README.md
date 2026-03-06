@@ -37,9 +37,13 @@ rc('text',  usetex=True) #line to comment if not using latex
 ## Structure
 ```
 velocirap/
-├── examples/               # Example gallery 
+├── Data/                   # Data folder, sorted by mission and by day
+│ ├── PSP_VDF/
+│ ├── SOLO_VDF/
+│   ├──yyy_mm_dd/
+│      ├──yyy_mm_dd_hh.cdf
 ├── docs/                   # Documentation
-├── tests/                  # Tests
+├── scripts/                # Example gallery 
 ├── velocirap/              # Source Code
 │ ├── folder/
 │   ├──function_file.py     
