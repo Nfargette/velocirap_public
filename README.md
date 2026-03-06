@@ -74,16 +74,16 @@ plot_timeseries(var, tc)
 </p>
 
 The VDF closest to _tc_ is then loaded into the _vdf_ dotmap object through the _load_vdf_ function. Optional parameters are the following : .
-* The _rotate_to_ parameter allows the user to control which rotation they want to perform. If _rotate_to_ is 'etp', 'vtp' or None, no rotation will be performed (the code is faster). This is useful if ones only need to compute moments for instance. If _rotate_to_ is 'rtn' or 'b', then only the specified rotation is performed. Finally, if _rotate_to_ is ['rtn', 'b'] (default value), both rotations are performed. H
+* The _rotate_to_ parameter allows the user to control which rotation they want to perform. If _rotate_to_ is 'etp', 'vtp' or None, no rotation will be performed (the code is faster). This is useful if ones only need to compute moments for instance. If _rotate_to_ is 'rtn' or 'b', then only the specified rotation is performed. Finally, if _rotate_to_ is ['rtn', 'b'] (default value), both rotations are performed. 
 * The _res_ parameter controls the grid size of the interpolation, if the VDF is to be rotated into the _rtn_ or the _b_ frame. The lowest the _res_ value is, the longer it will take to interpolate the VDF. The default value is 10 km/s.  
-* The _cleaning_ parameter allows the user to remove one level count dark noise from the VDF
+* The _cleaning_ parameter allows the user to remove one level count dark noise from the Solar Orbiter VDF
 * The _particle_ parameter sets the type of particle considered, which should be 'proton' (default) or 'alpha'. This is particularly relevant for SOLO data and allows to set the mass and charge of the particle, which matters in several calculations.
 
 Here, we load the VDF with default values
 ```
 vdf = load_vdf(vdf, tc, var)
 ```
-We can then plot the vdf using the _plot_vdf_ function. The user needs to specify the frame of visualisation : '_etp_' (energy theta phi), '_vtp_' (velocity theta phi), '_rtn_' or '_b_'. In the _rtn_ plot, the black arrow shows the magnetic field orientation, and a prediction for the helium2+ (alpha) bulk speed is overlayed assuming that the drift speed between alphas and protons is null (see the _Velocirap_documentation.pdf_ in the _docs_ folder for details about the computation of this prediction).
+We can then plot the vdf using the _plot_vdf_ function. The user needs to specify the frame of visualisation : '_etp_' (energy theta phi), '_vtp_' (velocity theta phi), '_rtn_' or '_b_'. In the _rtn_ plot, the black arrow shows the magnetic field orientation.
 
 ```
 plot_vdf(vdf, 'vtp')
@@ -97,7 +97,7 @@ VTP frame             |  RTN frame
 The _plot_vdf_ function has an optionnal argument, _p_. The _p_ parameter should be a list including the density in cm-3, the RTN velocity in km/s, and the kT tensor in the RTN frame, in eV. The scaled multivariate normal distribution with the defined parameters will then be overlayed. Here is what it looks like for our VDF in the $b$ frame if we choose to overlay the L2 moments :
 
 ```
-plot_vdf(vdf, 'b', p=[vdf.N0, vdf.U0, vdf.kT0]) 
+plot_vdf(vdf, 'b', p=[vdf.N0, vdf.U0_rtn, vdf.kT0_rtn]) 
 plt.show()
 ```
 
@@ -116,7 +116,7 @@ vdf.info.SC = 'SOLO'
 tb = datetime(2022, 3, 1, 2, ) #begining
 te = datetime(2022, 3, 1, 3, ) #end
 
-#frame of projection, should be 'etp', 'rtn' or 'b'
+#frame of projection, should be 'etp', 'vtp', 'rtn' or 'b'
 frame = 'rtn'
 ```
 Output of the codes will be saved in the default configuration :
@@ -148,7 +148,7 @@ n_max_png = 100 # set to np.nan if you want to generate all images
 N_pts = np.nanmin([len(var.U.date), n_max_png]) 
 step = len(var.U.date) // N_pts
 ```
-The script will loop and generate png files through the _plot_film_ function.
+The script will loop and generate png files through the _plot_film_ function. A prediction for the helium2+ (alpha) bulk speed is plotted on the VDF assuming that the drift speed between alphas and protons is null (see the _Velocirap_documentation.pdf_ in the _docs_ folder for details about the computation of this prediction).
 
 The final step is to create the animation file through the _create_animation_ function. The user can specify the animation output format (mp4 or gif, default to mp4), the frame per second resolution (default to 24), and the _delete_figure_files_ option that will delete the created png figures if set to _True_ (default to _False_). Let us create a gif animation :
 ```
