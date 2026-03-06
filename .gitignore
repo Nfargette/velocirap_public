@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# C extensions
+*.so
+
+# Distribution / packaging
+data/
+Films/
+*.pyc
+*.egg-info/
+
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Created folders
+Data/
+results/
+
+# Mac specifics
+.DS_Store
