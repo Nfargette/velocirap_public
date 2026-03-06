@@ -3,7 +3,7 @@
 Velocirap is a Python library designed to facilitate the advanced analysis of 
 ion velocity distribution functions (VDFs) from space missions such as 
 Solar Orbiter, Parker Solar Probe, and the future HelioSwarm mission. 
-It is developped at the _Institut de Recherche en Astrophysique et PLanétologie_ 
+It is developped at the _Institut de Recherche en Astrophysique et Planétologie_ 
 (IRAP) by the Proton and Alpha Sensor (PAS) team of the Solar Orbiter mission.
 It provides a wide range of tools for loading, processing, and visualizing VDF
 data.
