@@ -38,7 +38,7 @@ plot_timeseries(var, tc)
 plot_vdf(vdf, 'etp') #distribution in energy theta phi
 plot_vdf(vdf, 'vtp') #distribution in velocity theta phi
 plot_vdf(vdf, 'rtn') #distribution in RTN
-plot_vdf(vdf, 'b', p=[vdf.N0, vdf.U0, vdf.kT0])   #distribution in field-aligned frame
+plot_vdf(vdf, 'b', p=[vdf.N0, vdf.U0_rtn, vdf.kT0_rtn])   #distribution in field-aligned frame
 
 plot_film(vdf, var, 'rtn')
 plt.show()
