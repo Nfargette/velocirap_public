@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+title: Velocirap, a Python library for advanced analysis of ion velocity distribution functions
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Fargette
+    given-names: Naïs
+    affiliation: Institut de Recherche en Astrophysique et Planétologie (IRAP), CNES, CNRS, UT, 31400 Toulouse, France
+
+  - family-names: Réville
+    given-names: Victor
+    affiliation: IRAP, CNES, CNRS, UT, 31400 Toulouse, France
+
+  - family-names: Vergé
+    given-names: Tristan
+    affiliation: IRAP, CNES, CNRS, UT, 31400 Toulouse, France
+
+  - family-names: Kieokaew 
+    given-names: Rungployphan
+    affiliation: IRAP, CNES, CNRS, UT, 31400 Toulouse, France
+
+  - family-names: Rasser
+    given-names: Corentin
+    affiliation: IRAP, CNES, CNRS, UT, 31400 Toulouse, France    
+    
+  - family-names: Génot
+    given-names: Vincent
+    affiliation: IRAP, CNES, CNRS, UT, 31400 Toulouse, France
+    
+  - family-names: Lavraud
+    given-names: Benoit
+    affiliation: Laboratoire d'Astrophysique de Bordeaux (LAB), CNES, CNRS, 33600 Pessac, France
+    
+  - family-names: Louarn
+    given-names: Philippe
+    affiliation: IRAP, CNES, CNRS, UT, 31400 Toulouse, France
+
+  - family-names: Fedorov
+    given-names: Andreï
+    affiliation: IRAP, CNES, CNRS, UT, 31400 Toulouse, France
+version: 1.0.0
+date-released: 2026-03-06
+url: https://github.com/Nfargette/velocirap_public
+license: BSD-3-Clause license 
