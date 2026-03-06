@@ -68,7 +68,7 @@ var = load_timeseries(var, tc, vdf.info.SC, Dt = 20, burst = True)
 plot_timeseries(var, tc)
 ```
 <p align="center">
-<img src="https://github.com/Nfargette/velocirap/blob/gopublic/docs/ReadMe_images/0_timeseries.png" alt="Timeseries" width="500"/>
+<img src="https://github.com/Nfargette/velocirap_public/blob/main/docs/ReadMe_images/0_timeseries.png" alt="Timeseries" width="500"/>
 </p>
 
 The VDF closest to _tc_ is then loaded into the _vdf_ dotmap object through the _load_vdf_ function. Optional parameters are the following : .
@@ -90,7 +90,7 @@ plt.show()
 ```
 VTP frame             |  RTN frame
 :-------------------------:|:-------------------------:
-<img src="https://github.com/Nfargette/velocirap/blob/gopublic/docs/ReadMe_images/1_vdf_vtp.png" alt="vdf_etp" width="500"/>|<img src="https://github.com/Nfargette/velocirap/blob/gopublic/docs/ReadMe_images/2_vdf_rtn.png" alt="vdf_rtn" width="500"/> 
+<img src="https://github.com/Nfargette/velocirap_public/blob/main/docs/ReadMe_images/1_vdf_vtp.png" alt="vdf_etp" width="500"/>|<img src="https://github.com/Nfargette/velocirap_public/blob/main/docs/ReadMe_images/2_vdf_rtn.png" alt="vdf_rtn" width="500"/> 
 
 The _plot_vdf_ function has an optionnal argument, _p_. The _p_ parameter should be a list including the density in cm-3, the RTN velocity in km/s, and the kT tensor in the RTN frame, in eV. The scaled multivariate normal distribution with the defined parameters will then be overlayed. Here is what it looks like for our VDF in the $b$ frame if we choose to overlay the L2 moments :
 
@@ -100,7 +100,7 @@ plt.show()
 ```
 
 <p align="center">
-<img src="https://github.com/Nfargette/velocirap/blob/gopublic/docs/ReadMe_images/3_vdf_b_l2_moments.png" alt="Timeseries" width="500"/>
+<img src="https://github.com/Nfargette/velocirap_public/blob/main/docs/ReadMe_images/3_vdf_b_l2_moments.png" alt="Timeseries" width="500"/>
 </p>
 
 
@@ -156,7 +156,7 @@ create_animation(
     fps = 10,
 )
 ```
-![Animation](https://github.com/Nfargette/velocirap/blob/gopublic/docs/ReadMe_images/5_film.gif)
+![Animation](https://github.com/Nfargette/velocirap_public/blob/main/docs/ReadMe_images/5_film.gif)
 
 
 ## Contributing
