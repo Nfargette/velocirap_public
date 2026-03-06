@@ -81,15 +81,10 @@ def plot_timeseries(var, tc):
     # - Np, Ne (cm-3)
     # - kT_parallel perp1, perp2 (eV)
 
-    """
-    #check temperature data is available 
-    n_ax, plot_T = 5, True
-    if np.isnan(var.kT_b.y).all() :
-        plot_T = False
-        n_ax = 4
-    
+    """   
     #creating figure 
     fig = plt.figure(figsize = (8, 8))
+    n_ax = 5
     gs = gridspec.GridSpec(n_ax,1)
     
     #creating subplots
@@ -133,19 +128,11 @@ def plot_timeseries(var, tc):
             color='k', lw=.3, label = "$n_e$"
         )    
         
-    if plot_T : 
-        if var.info.Tcalc == 'rotation' : 
-            vec_plot(
-                ax[4], var.kT.date, var.kT_b.y[:3] , 
-                label = [r"$T_{\parallel}$", r"$T_{\perp 1}$", r"$T_{\perp 2}$"],
-                c = ['k', 'purple', 'magenta'], alpha=[1, .7, .7], norm=False, lw=.7
-            )
-        elif var.info.Tcalc == 'diagonalisation' :
-            vec_plot(
-                ax[4], var.kT.date, var.kT_b.y[:3] , 
-                label = [r"$T_{diag, \parallel}$", r"$T_{diag, \perp 1}$", r"$T_{diag, \perp 2}$"],
-                c = ['k', 'purple', 'magenta'], alpha=[1, .7, .7], norm=False, lw=.7
-            )
+    vec_plot(
+        ax[4], var.kT.date, var.kT_b.y[:3] , 
+        label = [r"$T_{\parallel}$", r"$T_{\perp 1}$", r"$T_{\perp 2}$"],
+        c = ['k', 'purple', 'magenta'], alpha=[1, .7, .7], norm=False, lw=.7
+    )
     
     # set date as title
     date_str = str(tc).split()[0]
@@ -156,8 +143,7 @@ def plot_timeseries(var, tc):
     ax[1].set_ylabel(r'$\mathrm{km/s}$') 
     ax[2].set_ylabel(r'$\mathrm{km/s}$') 
     ax[3].set_ylabel(r'$\mathrm{cm}^{-3}$') 
-    if plot_T : 
-        ax[4].set_ylabel(r'$\mathrm{eV}$')  
+    ax[4].set_ylabel(r'$\mathrm{eV}$')  
     [ax[i].get_yaxis().set_label_coords(-.08,.6) for i in range(len(ax))]
 
     #legend
