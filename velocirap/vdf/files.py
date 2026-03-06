@@ -106,8 +106,8 @@ def create_1h_cdf_file(tc, SC = 'SOLO'): # From load/
     date = f"{tc.year}_{tc.month:02d}_{tc.day:02d}"
     
     # Create directory if it does not exist     
-    # dirpath = os.path.dirname(__file__)+f"/../../Data/{SC}_VDF/{date}/"
-    dirpath = f"./Data/PSP_VDF/{date}/"
+    dirpath = os.path.dirname(__file__)+f"/../../Data/{SC}_VDF/{date}/"
+    # dirpath = f"./Data/{SC}_VDF/{date}/"
 
     if not os.path.exists(dirpath):
         os.makedirs(dirpath, exist_ok=True)
