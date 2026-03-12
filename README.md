@@ -23,7 +23,7 @@ data.
 git clone git@github.com:Nfargette/velocirap_public.git
 
 # Get into the new folder
-cd velocirap
+cd velocirap_public
 
 # Install all required librairies
 pip install -e .
